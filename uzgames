@@ -1,0 +1,5 @@
+require 'mechanize'
+agent = Mechanize.new.get("http://www.uzgames.com/playstation-3---ps3--/jogos-para-ps3?O=OrderByTopSaleDESC")
+preco = agent.search('.valor-por> strong').map(&:text)[0]
+descricao = agent.search('.data > h3').map(&:text)[0]
+link = agent.root.css('.data > h3 > a[href]')[0]['href']
