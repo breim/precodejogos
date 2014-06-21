@@ -1,4 +1,4 @@
 precodejogos
 ============
 
-Crawler para compraração de preço de jogos de video games
+Crawler para comparação de preços de jogos
