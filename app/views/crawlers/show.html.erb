@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site name:</strong>
+  <%= @crawler.site_name %>
+</p>
+
+<p>
+  <strong>Site link:</strong>
+  <%= @crawler.site_link %>
+</p>
+
+<p>
+  <strong>Product price:</strong>
+  <%= @crawler.product_price %>
+</p>
+
+<p>
+  <strong>Product title:</strong>
+  <%= @crawler.product_title %>
+</p>
+
+<p>
+  <strong>Product image:</strong>
+  <%= @crawler.product_image %>
+</p>
+
+<p>
+  <strong>Product link:</strong>
+  <%= @crawler.product_link %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @crawler.status %>
+</p>
+
+<%= link_to 'Edit', edit_crawler_path(@crawler) %> |
+<%= link_to 'Back', crawlers_path %>

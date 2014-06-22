@@ -1,0 +1,45 @@
+<%= form_for(@crawler) do |f| %>
+  <% if @crawler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crawler.errors.count, "error") %> prohibited this crawler from being saved:</h2>
+
+      <ul>
+      <% @crawler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :site_name %><br>
+    <%= f.text_field :site_name %>
+  </div>
+  <div class="field">
+    <%= f.label :site_link %><br>
+    <%= f.text_area :site_link %>
+  </div>
+  <div class="field">
+    <%= f.label :product_price %><br>
+    <%= f.text_field :product_price %>
+  </div>
+  <div class="field">
+    <%= f.label :product_title %><br>
+    <%= f.text_field :product_title %>
+  </div>
+  <div class="field">
+    <%= f.label :product_image %><br>
+    <%= f.text_area :product_image %>
+  </div>
+  <div class="field">
+    <%= f.label :product_link %><br>
+    <%= f.text_area :product_link %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
