@@ -69,6 +69,6 @@ class CrawlersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def crawler_params
-      params.require(:crawler).permit(:site_name, :site_link, :product_price, :product_title, :product_image, :product_link, :status, :site_paginas)
+      params.require(:crawler).permit(:site_name, :site_link, :product_price, :product_title, :product_image, :product_link, :status, :site_paginas,:console_id)
     end
 end

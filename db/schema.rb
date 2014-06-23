@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623115251) do
+ActiveRecord::Schema.define(version: 20140623154523) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "consoles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "crawlers", force: true do |t|
     t.string   "site_name"
@@ -24,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140623115251) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "site_paginas",  default: 0
+    t.integer  "console_id",    default: 0
   end
 
   create_table "products", force: true do |t|
@@ -39,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140623115251) do
     t.integer  "image_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "crawler_id"
   end
 
 end
