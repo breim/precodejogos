@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622170647) do
+ActiveRecord::Schema.define(version: 20140623002040) do
 
   create_table "crawlers", force: true do |t|
     t.string   "site_name"
@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 20140622170647) do
     t.string   "product_title"
     t.text     "product_image"
     t.text     "product_link"
-    t.integer  "status"
+    t.integer  "status",        default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_paginas",  default: 0
   end
 
 end
