@@ -41,6 +41,7 @@
     <%= f.number_field :site_paginas %>
   </div>
 
+  <%= f.collection_select :console_id, Console.order(:name),:id,:name, include_blank: true %>
 
   <div class="field">
     <%= f.label :status %><br>
