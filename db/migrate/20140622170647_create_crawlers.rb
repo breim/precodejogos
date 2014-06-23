@@ -7,7 +7,7 @@ class CreateCrawlers < ActiveRecord::Migration
       t.string :product_title
       t.text :product_image
       t.text :product_link
-      t.integer :status
+      t.integer :status, :default => 0
 
       t.timestamps
     end
