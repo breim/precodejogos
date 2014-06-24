@@ -1,0 +1,21 @@
+<%= params[:id] %>
+<%# @products.each do |product| %>
+	<%# product.product_title %><br>
+<%# end %>
+
+
+<%= form_tag ('/create_game'), method: :put do %>
+	
+	<%= hidden_field :id, :value => params[:id] %>
+
+	<% @products.each do |product| %>
+		<%= check_box_tag "product_ids[]", product.id %>
+		<%= product.product_title %> - <%= product.game_id %><br>
+	
+			<%= link_to "Retirar o game",product_path(product,:product => { :game_id => 0}),	:method => :put,:confirm => "Você tem certeza ?" 
+	%>
+
+	<% end %>
+
+	<%= submit_tag("Search") %>
+<% end %>
