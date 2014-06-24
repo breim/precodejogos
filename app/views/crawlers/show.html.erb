@@ -1,43 +1,59 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well-custom"> 
 
-<p>
-  <strong>Site name:</strong>
-  <%= @crawler.site_name %>
-</p>
+        <div class="pull-right">
+          <button class='btn btn-default' ><i class='fa fa-bars'></i> <%= @crawler.products.count %> </button>
+            |
+          <%= link_to "<i class='fa fa-pencil'></i> Editar".html_safe, edit_crawler_path(@crawler),:class => "btn btn-danger" %>
+        </div> 
 
-<p>
-  <strong>Site link:</strong>
-  <%= @crawler.site_link %>
-</p>
+        <%# link_to 'Back', crawlers_path %>
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Product price:</strong>
-  <%= @crawler.product_price %>
-</p>
+        <p>
+          <strong>Site name:</strong>
+          <%= @crawler.site_name %>
+        </p>
 
-<p>
-  <strong>Product title:</strong>
-  <%= @crawler.product_title %>
-</p>
+        <p>
+          <strong>Site link:</strong>
+          <%= @crawler.site_link %>
+        </p>
 
-<p>
-  <strong>Product image:</strong>
-  <%= @crawler.product_image %>
-</p>
+        <p>
+          <strong>Product price:</strong>
+          <%= @crawler.product_price %>
+        </p>
 
-<p>
-  <strong>Product link:</strong>
-  <%= @crawler.product_link %>
-</p>
+        <p>
+          <strong>Product title:</strong>
+          <%= @crawler.product_title %>
+        </p>
 
-<p>
-  <%= @crawler.site_paginas %>
-</p>
+        <p>
+          <strong>Product image:</strong>
+          <%= @crawler.product_image %>
+        </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @crawler.status %>
-</p>
+        <p>
+          <strong>Product link:</strong>
+          <%= @crawler.product_link %>
+        </p>
 
-<%= link_to 'Edit', edit_crawler_path(@crawler) %> |
-<%= link_to 'Back', crawlers_path %>
+        <p>
+          <strong>Quantidade de páginas</strong>
+          <%= @crawler.site_paginas %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @crawler.status %>
+        </p>
+
+      
+      </div>
+    </div>
+  </div>
+</div>

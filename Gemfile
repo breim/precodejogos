@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'mechanize'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views' # adiciona o thema do bootstrap 3 nas page views
+gem "friendly_id"
+gem 'impressionist'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
