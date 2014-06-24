@@ -1,6 +1,13 @@
-<h1>Editing crawler</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @crawler %> |
-<%= link_to 'Back', crawlers_path %>
+<div class="container">
+	<div class="row">
+    	<div class="col-md-12">
+    		<div class="well-custom"> 
+          		<button class='btn btn-default pull-right' ><i class='fa fa-shopping-cart'></i> <%= @crawler.products.count %> </button><br>
+				<legend>Editando crawler</legend>
+				<%= render 'form' %>
+				<%= link_to 'Show', @crawler %> |
+				<%= link_to 'Back', crawlers_path %>
+			</div>
+		</div>
+	</div>
+</div>

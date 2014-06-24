@@ -11,41 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :site_name %><br>
-    <%= f.text_field :site_name %>
+    <%= f.text_field :site_name,:class=> 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :site_link %><br>
-    <%= f.text_area :site_link %>
+    <%= f.text_area :site_link,:class=> 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :product_price %><br>
-    <%= f.text_field :product_price %>
+    <%= f.text_field :product_price,:class=> 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :product_title %><br>
-    <%= f.text_field :product_title %>
+    <%= f.text_field :product_title,:class=> 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :product_image %><br>
-    <%= f.text_area :product_image %>
+    <%= f.text_area :product_image,:class=> 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :product_link %><br>
-    <%= f.text_area :product_link %>
+    <%= f.text_area :product_link,:class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :site_paginas %><br>
-    <%= f.number_field :site_paginas %>
+    <%= f.number_field :site_paginas,:class=> 'form-control' %>
   </div>
 
   <%= f.collection_select :console_id, Console.order(:name),:id,:name, include_blank: true %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :status %><br>
-    <%= f.number_field :status %>
+    <%= f.number_field :status,:class=> 'form-control' %>
   </div>
 
   <div class="actions">

@@ -10,6 +10,7 @@
             <tr>
               <th>Site name</th>
               <th>Site link</th>
+              <th><i class='fa fa-shopping-cart'></i></th>
               <th>Status</th>
               <th>Console</th>
               <th colspan="3"></th>
@@ -20,6 +21,7 @@
               <tr>
                 <td><%= crawler.site_name %></td>
                 <td><%= crawler.site_link %></td>
+                <td><%= crawler.products.count %></td>
                 <td><%= crawler.status %></td>
                 <td><%= crawler.console.name if crawler.console.present? %></td>
                 <td><%= link_to 'Show', crawler %></td>

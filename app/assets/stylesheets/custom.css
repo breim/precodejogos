@@ -1,6 +1,7 @@
 body{
 	background-image:url('/img/bg.png');
-	background-repeat:repeat-x;
+	background-repeat:repeat;
+    padding-top: 70px;
 }
 
 .well-custom{

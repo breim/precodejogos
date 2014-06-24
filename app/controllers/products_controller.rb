@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order("created_at desc").page(params[:page]).per(20)
     #@game = Game.find(params[:id])
     #@products = Product.where("product_title LIKE '%#{@game.name}%'")
   end
