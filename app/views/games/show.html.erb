@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Descripton:</strong>
+  <%= @game.descripton %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @game.category_id %>
+</p>
+
+<p>
+  <strong>Console:</strong>
+  <%= @game.console_id %>
+</p>
+
+<p>
+  <strong>Youtube link:</strong>
+  <%= @game.youtube_link %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @game.status %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

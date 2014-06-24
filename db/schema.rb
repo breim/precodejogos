@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623154523) do
+ActiveRecord::Schema.define(version: 20140623201337) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(version: 20140623154523) do
     t.integer  "console_id",    default: 0
   end
 
+  create_table "games", force: true do |t|
+    t.string   "name"
+    t.text     "descripton"
+    t.integer  "category_id"
+    t.integer  "console_id"
+    t.string   "youtube_link"
+    t.integer  "status",       default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "products", force: true do |t|
     t.string   "product_title"
     t.decimal  "product_price",      precision: 8, scale: 2
@@ -53,6 +64,7 @@ ActiveRecord::Schema.define(version: 20140623154523) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "crawler_id"
+    t.integer  "game_id"
   end
 
 end

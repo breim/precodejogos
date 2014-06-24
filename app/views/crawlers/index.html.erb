@@ -25,7 +25,7 @@
         <td><%= crawler.product_image %></td>
         <td><%= crawler.product_link %></td>
         <td><%= crawler.status %></td>
-        <td><%= crawler.console.name %></td>
+        <td><%= crawler.console.name if crawler.console.present? %></td>
         <td><%= link_to 'Show', crawler %></td>
         <td><%= link_to 'Edit', edit_crawler_path(crawler) %></td>
         <td><%= link_to 'Destroy', crawler, method: :delete, data: { confirm: 'Are you sure?' } %></td>

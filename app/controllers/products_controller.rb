@@ -5,11 +5,31 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    #@game = Game.find(params[:id])
+    #@products = Product.where("product_title LIKE '%#{@game.name}%'")
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+  end
+
+
+  def add_game
+    @game = Game.find(params[:id])
+    @products = Product.where("product_title LIKE '%#{@game.name}%'")
+  end
+
+  def create_game
+    @game_id = params['id'].to_s.gsub(/[^\d]/, '')
+    @product_ids = params['product_ids']
+
+    @product_ids.each do |p|
+      atualizar = Product.find(p.to_i)
+      atualizar.update_attributes(:game_id => @game_id)
+    end
+    redirect_to games_path
+
   end
 
   # GET /products/new
@@ -19,8 +39,11 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @game = Game.find(params[:id])
+    @products = Product.where("product_title LIKE '%#{@game.name}%'")
   end
 
+   
   # POST /products
   # POST /products.json
   def create
@@ -69,6 +92,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:product_title, :product_price, :product_link, :site_name, :status, :console_id, :category_id, :crawler_id)
+      params.require(:product).permit(:product_title, :product_price, :product_link, :site_name, :status, :console_id, :category_id, :crawler_id,:game_id)
     end
 end

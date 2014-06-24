@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  resources :games
+  
+  get 'games/:id/products' => 'products#add_game'
+
   resources :consoles
 
   resources :categories
 
-  resources :products
+  resources :products 
+
+  put "/create_game", to: "products#create_game"
+
 
   resources :crawlers
   root 'crawlers#index'
